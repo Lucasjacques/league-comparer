@@ -13,6 +13,11 @@ function createNameUrl(sName, region) {
   return url;
 }
 
+function createStatsUrl(id, region) {
+  var url = 'https://'+region+'.api.pvp.net/api/lol/'+region+'/v1.3/stats/by-summoner/'+id+'/ranked?season=SEASON4&api_key='+key;
+  return url;
+}
+
 $(document).ready(function() {
 
 $('#comparator').submit(function() {
@@ -24,15 +29,26 @@ $('#comparator').submit(function() {
   var summoner2 = {};
 
   doRequestThen(url1, function(data) {
+    summoner1 = data[sName1].id;
+  });
+
+  doRequestThen(url2, function(data) {
+    summoner2 = data[sName2].id;
+  });
+
+  url1 = createStatsUrl(summoner1, 'br');
+  url2 = createStatsUrl(summoner2, 'br');
+
+  doRequestThen(url1, function(data) {
     summoner1 = data;
   });
 
   doRequestThen(url2, function(data) {
     summoner2 = data;
-  })
+  });
 
-  alert(summoner1[sName1].name);
-  alert(summoner2[sName2].name);
+  console.log(summoner1);
+  console.log(summoner2);
 
   });
 
