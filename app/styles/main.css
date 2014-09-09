@@ -63,6 +63,12 @@ body {
   margin-top: 28px;
 }
 
+#versus {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #C50000;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -88,13 +94,9 @@ body {
   }
 
   .comparatorForm {
+    padding-top: 10px;
     line-height: 200%;
-    padding: 15px;
   }
 
-  .versus {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #C50000;
-  }
+
 }
