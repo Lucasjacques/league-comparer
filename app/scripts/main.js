@@ -20,7 +20,8 @@ function createStatsUrl(id, region) {
 
 $(document).ready(function() {
 
-$('#comparator').submit(function() {
+$('#comparator').submit(function(e) {
+  e.preventDefault();
   var sName1 = $('#mySName').val().replace(' ', '');
   var sName2 = $('#targetSName').val().replace(' ', '');
   var url1 = createNameUrl(sName1, 'br');
