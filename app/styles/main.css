@@ -4,6 +4,10 @@ body {
   padding-bottom: 20px;
 }
 
+button {
+  margin: 5%;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -37,8 +41,8 @@ body {
   font-weight: bold;
 }
 
-.region-selector {
-  min-height: 20px;
+.form {
+  padding-top: 3%;
 }
 
 /* Customize container */

@@ -2,37 +2,39 @@
   <h1>Compare my Stats</h1>
   <form ng-submit="compare()">
 
-    <p>
-      <div class="row">
-        <div class="col-sm-offset-2 col-sm-6">
-          <input type="text" class="form-control input-lg" placeholder="Your Summoner's Name" ng-model="sum1Name" required></input>
+  <div class="form">
+      <p>
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-7">
+            <input type="text" class="form-control input-lg" placeholder="Your Summoner's Name" ng-model="sum1Name" required></input>
+          </div>
+          <div class="col-sm-3">
+            <select class="form-control input-lg" ng-model="sum1Region" ng-options="region | uppercase for region in regions" required>
+            </select>
+          </div>
         </div>
-        <div class="col-sm-3">
-          <select class="form-control input-lg" ng-model="sum1Region" ng-options="region | uppercase for region in regions" required>
-          </select>
-        </div>
-      </div>
-    </p>
+      </p>
 
-    <p>
-    <div class="row">
-      <div class="col-sm-2 col-sm-offset-4">
-        <span class="versus">Vs.</span>
+      <p>
+      <div class="row">
+        <div class="col-sm-2 col-sm-offset-4">
+          <span class="versus">Vs.</span>
+        </div>
       </div>
+      </p>
+
+      <p>
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-7">
+            <input type="text" class="form-control input-lg" placeholder="Target's Summoner's Name" ng-model="sum2Name" required></input>
+          </div>
+          <div class="col-sm-3">
+            <select class="form-control input-lg" ng-model="sum2Region" ng-options="region | uppercase for region in regions" required>
+            </select>
+          </div>
+        </div>
+      </p>
     </div>
-    </p>
-
-    <p>
-      <div class="row">
-        <div class="col-sm-offset-2 col-sm-6">
-          <input type="text" class="form-control input-lg" placeholder="Target's Summoner's Name" ng-model="sum2Name" required></input>
-        </div>
-        <div class="col-sm-3">
-          <select class="form-control input-lg" ng-model="sum2Region" ng-options="region | uppercase for region in regions" required>
-          </select>
-        </div>
-      </div>
-    </p>
 
     <p>
       <button type="submit" class="btn btn-lg btn-success">Compare
