@@ -7,11 +7,12 @@
  * # MainCtrl
  * Controller of the leagueComparerApp
  */
+
 angular.module('leagueComparerApp')
   .controller('MainCtrl', function($scope) {
 
     // Riot Development API KEY
-    var key = '';
+    var key = '0c2f29fd-b02f-4fdf-b0c5-c4b27f532efc';
 
     // Array with all League of Legends Regions
     $scope.regions = ['na', 'br', 'eune', 'euw', 'kr', 'lan', 'las', 'na', 'oce', 'tr'];

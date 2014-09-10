@@ -4,8 +4,14 @@ body {
   padding-bottom: 20px;
 }
 
+/* Space button from form */
 button {
-  margin: 5%;
+  margin-top: 4%;
+}
+
+/* Space form from title */
+form {
+  padding-top: 3%;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -39,10 +45,6 @@ button {
   font-size: 1.6em;
   color: #C70000;
   font-weight: bold;
-}
-
-.form {
-  padding-top: 3%;
 }
 
 /* Customize container */
