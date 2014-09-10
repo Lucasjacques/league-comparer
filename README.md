@@ -20,9 +20,9 @@ grunt build
 
 ## Main Contributors
 
-[![Lucas F. Costa](http://s15.postimg.org/86qcwe053/6868147.png)](https://github.com/lucasfcosta) | [![Lucas Vieira](http://s27.postimg.org/jtkpkk2in/6868148.png)](https://github.com/vieira.lucas)
+[![Lucas F. Costa](http://s15.postimg.org/86qcwe053/6868147.png)](https://github.com/lucasfcosta) | [![Lucas Vieira](http://s27.postimg.org/jtkpkk2in/6868148.png)](https://github.com/vieiralucas)
 --- | ---
-[Lucas F. Costa](https://github.com/lucasfcosta) | [Lucas Vieira](https://github.com/vieira.lucas)
+[Lucas F. Costa](https://github.com/lucasfcosta) | [Lucas Vieira](https://github.com/vieiralucas)
 
 
 ### Disclaimer
