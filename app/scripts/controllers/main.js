@@ -9,7 +9,7 @@
  */
 
  angular.module('leagueComparerApp')
- .controller('MainCtrl', function($scope) {
+ .controller('MainCtrl', function($scope, $location) {
 
     // Riot Development API KEY
     var key = '0c2f29fd-b02f-4fdf-b0c5-c4b27f532efc';
@@ -61,6 +61,9 @@
           console.log(e);
         }
       });
+
+      goToView('/results');
+
     }
 
     // This does a request to the passed url and then executes the callback function
@@ -86,11 +89,13 @@
       return url;
     }
 
+    function goToView(view) {
+      $location.path(view);
+    }
+
     // Changes navigation pills status when navigating through them
     $('ul.nav-pills li a').click(function (e) {
       $('ul.nav-pills li.active').removeClass('active')
       $(this).parent('li').addClass('active')
     });
-
-
   });
