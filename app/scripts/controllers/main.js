@@ -8,8 +8,8 @@
  * Controller of the leagueComparerApp
  */
 
-angular.module('leagueComparerApp')
-  .controller('MainCtrl', function($scope) {
+ angular.module('leagueComparerApp')
+ .controller('MainCtrl', function($scope) {
 
     // Riot Development API KEY
     var key = '0c2f29fd-b02f-4fdf-b0c5-c4b27f532efc';
@@ -85,5 +85,10 @@ angular.module('leagueComparerApp')
       var url = 'https://' + region + '.api.pvp.net/api/lol/' + region + '/v1.3/stats/by-summoner/' + id + '/ranked?season=SEASON4&api_key=' + key;
       return url;
     }
+
+    $('ul.nav-pills li a').click(function (e) {
+      $('ul.nav-pills li.active').removeClass('active')
+      $(this).parent('li').addClass('active')
+    });
 
   });

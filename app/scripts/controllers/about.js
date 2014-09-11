@@ -14,4 +14,10 @@ angular.module('leagueComparerApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.init = function(summoner1, summoner2) {
+      $scope.summoner1 = summoner1;
+      $scope.summoner1 = summoner2;
+    }
+
   });
