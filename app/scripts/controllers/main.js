@@ -8,8 +8,8 @@
  * Controller of the leagueComparerApp
  */
 
- angular.module('leagueComparerApp')
- .controller('MainCtrl', function($scope, $location) {
+angular.module('leagueComparerApp')
+  .controller('MainCtrl', function($scope, $location) {
 
     // Riot Development API KEY
     var key = '0c2f29fd-b02f-4fdf-b0c5-c4b27f532efc';
@@ -92,10 +92,4 @@
     function goToView(view) {
       $location.path(view);
     }
-
-    // Changes navigation pills status when navigating through them
-    $('ul.nav-pills li a').click(function (e) {
-      $('ul.nav-pills li.active').removeClass('active')
-      $(this).parent('li').addClass('active')
-    });
   });
