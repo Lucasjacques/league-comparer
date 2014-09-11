@@ -14,5 +14,5 @@ angular.module('leagueComparerApp')
         return true;
       }
       return false;
-    }
+    };
   });

@@ -9,7 +9,7 @@
  */
 
  angular.module('leagueComparerApp')
- .controller('MainCtrl', function($scope, $window, $location) {
+ .controller('MainCtrl', function($scope, transferData, $location) {
 
     // Riot Development API KEY
     var key = '0c2f29fd-b02f-4fdf-b0c5-c4b27f532efc';
@@ -32,6 +32,7 @@
       doRequest(nameUrl, {
         success: function(data) {
           summonerName1 = data[Object.keys(data)[0]].name;
+          transferData.set(0, summonerName1);
           var id = data[Object.keys(data)[0]].id;
           var statusUrl = createStatsUrl(id, $scope.sum1Region);
           doRequest(statusUrl, {
@@ -52,6 +53,7 @@
       doRequest(nameUrl, {
         success: function(data) {
           summonerName2 = data[Object.keys(data)[0]].name;
+          transferData.set(1, summonerName2);
           var id = data[Object.keys(data)[0]].id;
           var statusUrl = createStatsUrl(id, $scope.sum2Region);
           doRequest(statusUrl, {
