@@ -86,9 +86,11 @@
       return url;
     }
 
+    // Changes navigation pills status when navigating through them
     $('ul.nav-pills li a').click(function (e) {
       $('ul.nav-pills li.active').removeClass('active')
       $(this).parent('li').addClass('active')
     });
+
 
   });
