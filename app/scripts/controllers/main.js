@@ -8,11 +8,15 @@
  * Controller of the leagueComparerApp
  */
 
-angular.module('leagueComparerApp')
-  .controller('MainCtrl', function($scope, $location) {
+ angular.module('leagueComparerApp')
+ .controller('MainCtrl', function($scope, $window, $location) {
 
     // Riot Development API KEY
     var key = '0c2f29fd-b02f-4fdf-b0c5-c4b27f532efc';
+
+    // Summoner Names
+    var summonerName1;
+    var summonerName2;
 
     // Array with all League of Legends Regions
     $scope.regions = ['na', 'br', 'eune', 'euw', 'kr', 'lan', 'las', 'na', 'oce', 'tr'];
@@ -24,9 +28,10 @@ angular.module('leagueComparerApp')
 
     // Performs all requests
     function doRequests() {
-      var nameUrl = createNameUrl($scope.sum1Name, $scope.sum1Region)
+      var nameUrl = createNameUrl($scope.sum1Name, $scope.sum1Region);
       doRequest(nameUrl, {
         success: function(data) {
+          summonerName1 = data[Object.keys(data)[0]].name;
           var id = data[Object.keys(data)[0]].id;
           var statusUrl = createStatsUrl(id, $scope.sum1Region);
           doRequest(statusUrl, {
@@ -46,6 +51,7 @@ angular.module('leagueComparerApp')
       nameUrl = createNameUrl($scope.sum2Name, $scope.sum2Region);
       doRequest(nameUrl, {
         success: function(data) {
+          summonerName2 = data[Object.keys(data)[0]].name;
           var id = data[Object.keys(data)[0]].id;
           var statusUrl = createStatsUrl(id, $scope.sum2Region);
           doRequest(statusUrl, {
