@@ -4,6 +4,10 @@ body {
   padding-bottom: 20px;
 }
 
+h1 {
+  margin-bottom: 5%;
+}
+
 /* Space button from form */
 button {
   margin-top: 4%;
@@ -20,6 +24,14 @@ form {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.text-left {
+  float: left;
+}
+
+.text-right {
+  float: right;
 }
 
 /* Custom page header */
