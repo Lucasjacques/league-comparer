@@ -53,6 +53,7 @@ form {
     max-width: 730px;
   }
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -60,8 +61,10 @@ form {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
+  margin-top: 20px;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
