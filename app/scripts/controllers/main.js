@@ -21,7 +21,7 @@
     // Array with all League of Legends Regions
     $scope.regions = ['na', 'br', 'eune', 'euw', 'kr', 'lan', 'las', 'na', 'oce', 'tr'];
 
-    // Called when the form is submited
+    // Called when the form is submitted
     $scope.compare = function() {
       doRequests();
     };
