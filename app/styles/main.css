@@ -59,6 +59,10 @@ form {
   font-weight: bold;
 }
 
+.personal-info {
+  line-height: 400%;
+}
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
